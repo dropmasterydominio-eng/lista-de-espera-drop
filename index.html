@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DROP MASTERY — Lista de Espera</title>
+<style>
+:root {
+  --primary: #e10600;    /* vermelho principal */
+  --secondary: #ff2b2b;  /* vermelho secundário */
+  --dark: #0b0b0b;       /* fundo */
+  --white: #ffffff;       /* texto */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+h1 {
+  color: var(--primary);
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.benefits {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.benefits li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.benefits li::before {
+  content: "✔";
+  color: var(--primary);
+  margin-right: 10px;
+}
+
+.form-section {
+  background-color: var(--dark);
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.form-section h2 {
+  color: var(--primary);
+  margin-bottom: 30px;
+}
+
+.iframe-container {
+  width: 100%;
+  height: 900px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+@media(max-width: 600px){
+  h1{ font-size:2.2rem;}
+  h2{ font-size:1.2rem;}
+  .iframe-container { height: 1200px; } /* aumenta no mobile */
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>DROP MASTERY</h1>
+  <h2>Do zero à sua primeira venda em 14 dias com dropshipping clique a clique</h2>
+
+  <p>Um guia prático que mostra como escolher produtos, montar uma loja Shopify e preparar suas primeiras vendas — mesmo começando do zero.</p>
+
+  <p>O lançamento oficial ainda não aconteceu. Quem entrar na lista de espera será avisado primeiro e poderá receber bônus exclusivos:</p>
+
+  <ul class="benefits">
+    <li>Templates de anúncios prontos</li>
+    <li>Lista de fornecedores confiáveis</li>
+    <li>Conteúdos antecipados sobre como começar corretamente</li>
+  </ul>
+
+  <p>As vagas iniciais serão limitadas. Garanta sua chance agora!</p>
+</div>
+
+<!-- ===== FORMULÁRIO GOOGLE FORMS ===== -->
+<div class="form-section">
+  <h1>Entrar na lista de espera</h1>
+
+  <div class="iframe-container">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfJJUG1rpl8qGcPPVEikXhjpUeW8CH9Mip5_H9epZp4j2jO6g/viewform?usp=publish-editor" 
+      width="100%" 
+      height="900" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Carregando…
+    </iframe>
+  </div>
+</div>
+
+<!-- NOTIFICAÇÃO SLIDE -->
+<div id="notification" class="slide-notification">
+  <span id="notification-text"></span>
+</div>
+
+<style>
+.slide-notification {
+  position: fixed;
+  bottom: 20px;
+  right: -350px; /* começa fora da tela */
+  background-color: #0b0b0b;
+  border: 2px solid #e10600;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  font-size: 16px;
+  z-index: 9999;
+  transition: right 0.5s ease-in-out, opacity 0.5s;
+  opacity: 0;
+}
+
+.slide-notification.show {
+  right: 20px; /* desliza para dentro */
+  opacity: 1;
+}
+
+.slide-notification.hide {
+  right: -350px; /* desliza para fora */
+  opacity: 0;
+}
+</style>
+
+<script>
+// Lista de nomes fictícios + cidades
+const names = [
+  "Owen, Maputo", "Lúcia, Beira", "Miguel, Nampula", "Sara, Chimoio", "Pedro, Matola",
+  "Ana, Pemba", "Carlos, Inhambane", "Mariana, Quelimane", "Rui, Tete", "Joana, Xai-Xai",
+  "Paulo, Nacala", "Catarina, Lichinga", "Bruno, Pemba", "Isabel, Maputo", "Daniel, Beira",
+  "Fátima, Nampula", "Ricardo, Chimoio", "Sofia, Matola", "Nelson, Pemba", "Rita, Inhambane",
+  "Tiago, Quelimane", "Patrícia, Tete", "Vítor, Xai-Xai", "Cláudia, Nacala", "Jorge, Lichinga",
+  "Helena, Maputo", "Fernando, Beira", "Carla, Nampula", "Rafael, Chimoio", "Marta, Matola",
+  "André, Pemba", "Mónica, Inhambane", "João, Quelimane", "Laura, Tete", "Eduardo, Xai-Xai",
+  "Paula, Nacala", "Gonçalo, Lichinga", "Vanessa, Maputo", "Marcelo, Beira", "Tatiana, Nampula",
+  "Alex, Chimoio", "Bianca, Matola", "Filipe, Pemba", "Daniela, Inhambane", "Samuel, Quelimane",
+  "Carolina, Tete", "Leonardo, Xai-Xai", "Helder, Nacala", "Nádia, Lichinga", "Guilherme, Maputo",
+  "Rosa, Beira", "Matias, Nampula", "Inês, Chimoio", "Dário, Matola", "Renata, Pemba"
+];
+
+let currentIndex = 0;
+
+function showNotification() {
+  const notification = document.getElementById('notification');
+  const text = document.getElementById('notification-text');
+
+  // Pega próximo nome
+  const person = names[currentIndex];
+  text.textContent = `${person} acabou de entrar na lista de espera!`;
+
+  // Mostra (slide para dentro)
+  notification.classList.add('show');
+  notification.classList.remove('hide');
+
+  // Esconde após 8s (slide para fora)
+  setTimeout(() => {
+    notification.classList.remove('show');
+    notification.classList.add('hide');
+  }, 8000);
+
+  // Próximo índice
+  currentIndex++;
+  if (currentIndex >= names.length) currentIndex = 0;
+
+  // Próxima notificação em 10s
+  setTimeout(showNotification, 15000);
+}
+
+// Começa automaticamente
+window.onload = () => {
+  setTimeout(showNotification, 2000); // 2s depois de carregar
+};
+</script>
+
+</body>
+  </html>
