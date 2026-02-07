@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1562979608087085');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1562979608087085&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Oferta Especial | Drop Mastery</title>
+
+<style>
+
+:root{
+--primary:#e10600;
+--secondary:#ff2b2b;
+--dark:#0b0b0b;
+--gray:#1a1a1a;
+--light:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+}
+
+body{
+background:var(--dark);
+color:white;
+text-align:center;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:60px 20px;
+}
+
+h1{
+font-size:2.6rem;
+margin-bottom:20px;
+}
+
+h2{
+color:var(--secondary);
+margin-bottom:20px;
+}
+
+p{
+color:#ccc;
+margin-bottom:18px;
+line-height:1.6;
+}
+
+.price{
+font-size:3.3rem;
+font-weight:bold;
+color:var(--secondary);
+margin:20px 0;
+}
+
+.old-price{
+text-decoration:line-through;
+color:#777;
+font-size:1.2rem;
+}
+
+.btn{
+background:var(--primary);
+padding:20px 45px;
+border-radius:8px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+display:inline-block;
+margin-top:25px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+opacity:.9;
+}
+
+.timer{
+font-size:1.6rem;
+margin-top:25px;
+color:var(--secondary);
+font-weight:bold;
+}
+
+.badge{
+background:var(--primary);
+padding:10px 18px;
+border-radius:40px;
+display:inline-block;
+margin-bottom:25px;
+font-size:.9rem;
+}
+
+.seals{
+margin-top:30px;
+font-size:.9rem;
+opacity:.7;
+}
+
+.blink {
+  animation: blinkAnim 1s infinite;
+  color: #ffffff; /* texto piscando */
+  font-weight: bold;
+}
+
+@keyframes blinkAnim {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; } /* texto pisca */
+}
+
+.badge {
+  background: var(--primary); /* vermelho */
+  padding: 10px 18px;
+  border-radius: 40px;
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  animation: pulseBg 1.5s infinite;
+}
+
+@keyframes pulseBg {
+  0% { background-color: #e10600; }
+  50% { background-color: #ff2b2b; } /* mais claro no meio da animação */
+  100% { background-color: #e10600; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="badge">
+  &#9888; <span class="blink">ESPERE! Oferta Exclusiva Liberada</span> 
+</div>
+
+<h1>Você quase perdeu essa oportunidade...</h1>
+
+<p>
+Percebemos que você demonstrou interesse no <strong>DROP MASTERY</strong>,
+mas ainda não concluiu sua inscrição.
+</p>
+
+<h2>Por isso liberamos um desconto secreto temporário.</h2>
+
+<p>
+Essa condição NÃO aparece novamente após sair desta página.
+</p>
+
+<div class="old-price">
+Valor original: $9.99
+</div>
+
+<div class="price">
+$6.99
+</div>
+
+<p>
+&#10004; Acesso completo ao treinamento <br>
+&#10004; Templates de anúncios <br>
+&#10004; Lista de fornecedores confiáveis <br>
+&#10004; Checklists validados <br>
+&#10004; Atualizações futuras gratuitas
+</p>
+
+<div class="timer" id="countdown">
+Oferta expira em 05:00
+</div>
+
+<a 
+href="https://pay.hotmart.com/N102929996D?off=svkkyh8t&lang=PT_BR&sck=HOTMART_PLATFORM&bid=1769792220558&cupom=OFERTA30"
+class="btn"
+id="buyBtn"
+>
+Garantir Minha Vaga Com Desconto
+</a>
+
+<div class="seals">
+&#128274; Compra segura &bull; Garantia de 7 dias &bull; Acesso imediato
+</div>
+
+</div>
+
+<script>
+
+let time = 300;
+const countdown = document.getElementById("countdown");
+const buyBtn = document.getElementById("buyBtn");
+
+function updateTimer(){
+
+let minutes = Math.floor(time / 60);
+let seconds = time % 60;
+
+if(seconds < 10){
+seconds = "0" + seconds;
+}
+
+countdown.innerHTML = "Oferta expira em " + minutes + ":" + seconds;
+
+if(time <= 0){
+
+buyBtn.innerText = "Oferta Encerrada";
+buyBtn.style.background = "#555";
+buyBtn.style.pointerEvents = "none";
+countdown.innerHTML = "Oferta encerrada";
+
+return;
+
+}
+
+time--;
+
+}
+
+updateTimer();
+setInterval(updateTimer,1000);
+
+</script>
+
+</body>
+</html>
