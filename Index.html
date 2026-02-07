@@ -1,248 +1,214 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1562979608087085');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1562979608087085&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Oferta Especial | Drop Mastery</title>
-
+<title>DROP MASTERY — Lista de Espera</title>
 <style>
-
-:root{
---primary:#e10600;
---secondary:#ff2b2b;
---dark:#0b0b0b;
---gray:#1a1a1a;
---light:#ffffff;
+:root {
+  --primary: #e10600;    /* vermelho principal */
+  --secondary: #ff2b2b;  /* vermelho secundário */
+  --dark: #0b0b0b;       /* fundo */
+  --white: #ffffff;       /* texto */
 }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--dark);
+  color: var(--white);
 }
 
-body{
-background:var(--dark);
-color:white;
-text-align:center;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:60px 20px;
+h1 {
+  color: var(--primary);
+  font-size: 2.8rem;
+  margin-bottom: 20px;
 }
 
-h1{
-font-size:2.6rem;
-margin-bottom:20px;
+h2 {
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 40px;
 }
 
-h2{
-color:var(--secondary);
-margin-bottom:20px;
+p {
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-p{
-color:#ccc;
-margin-bottom:18px;
-line-height:1.6;
+.benefits {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
 }
 
-.price{
-font-size:3.3rem;
-font-weight:bold;
-color:var(--secondary);
-margin:20px 0;
+.benefits li {
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
-.old-price{
-text-decoration:line-through;
-color:#777;
-font-size:1.2rem;
+.benefits li::before {
+  content: "✔";
+  color: var(--primary);
+  margin-right: 10px;
 }
 
-.btn{
-background:var(--primary);
-padding:20px 45px;
-border-radius:8px;
-text-decoration:none;
-color:white;
-font-weight:bold;
-display:inline-block;
-margin-top:25px;
-transition:.3s;
+.form-section {
+  background-color: var(--dark);
+  padding: 40px 20px;
+  text-align: center;
 }
 
-.btn:hover{
-transform:scale(1.05);
-opacity:.9;
+.form-section h2 {
+  color: var(--primary);
+  margin-bottom: 30px;
 }
 
-.timer{
-font-size:1.6rem;
-margin-top:25px;
-color:var(--secondary);
-font-weight:bold;
+.iframe-container {
+  width: 100%;
+  height: 900px;
 }
 
-.badge{
-background:var(--primary);
-padding:10px 18px;
-border-radius:40px;
-display:inline-block;
-margin-bottom:25px;
-font-size:.9rem;
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
 }
 
-.seals{
-margin-top:30px;
-font-size:.9rem;
-opacity:.7;
+@media(max-width: 600px){
+  h1{ font-size:2.2rem;}
+  h2{ font-size:1.2rem;}
+  .iframe-container { height: 1200px; } /* aumenta no mobile */
 }
-
-.blink {
-  animation: blinkAnim 1s infinite;
-  color: #ffffff; /* texto piscando */
-  font-weight: bold;
-}
-
-@keyframes blinkAnim {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; } /* texto pisca */
-}
-
-.badge {
-  background: var(--primary); /* vermelho */
-  padding: 10px 18px;
-  border-radius: 40px;
-  display: inline-block;
-  margin-bottom: 25px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  animation: pulseBg 1.5s infinite;
-}
-
-@keyframes pulseBg {
-  0% { background-color: #e10600; }
-  50% { background-color: #ff2b2b; } /* mais claro no meio da animação */
-  100% { background-color: #e10600; }
-}
-
 </style>
 </head>
-
 <body>
 
 <div class="container">
+  <h1>DROP MASTERY</h1>
+  <h2>Do zero à sua primeira venda em 14 dias com dropshipping clique a clique</h2>
 
-<div class="badge">
-  &#9888; <span class="blink">ESPERE! Oferta Exclusiva Liberada</span> 
+  <p>Um guia prático que mostra como escolher produtos, montar uma loja Shopify e preparar suas primeiras vendas — mesmo começando do zero.</p>
+
+  <p>O lançamento oficial ainda não aconteceu. Quem entrar na lista de espera será avisado primeiro e poderá receber bônus exclusivos:</p>
+
+  <ul class="benefits">
+    <li>Templates de anúncios prontos</li>
+    <li>Lista de fornecedores confiáveis</li>
+    <li>Conteúdos antecipados sobre como começar corretamente</li>
+  </ul>
+
+  <p>As vagas iniciais serão limitadas. Garanta sua chance agora!</p>
 </div>
 
-<h1>Você quase perdeu essa oportunidade...</h1>
+<!-- ===== FORMULÁRIO GOOGLE FORMS ===== -->
+<div class="form-section">
+  <h1>Entrar na lista de espera</h1>
 
-<p>
-Percebemos que você demonstrou interesse no <strong>DROP MASTERY</strong>,
-mas ainda não concluiu sua inscrição.
-</p>
-
-<h2>Por isso liberamos um desconto secreto temporário.</h2>
-
-<p>
-Essa condição NÃO aparece novamente após sair desta página.
-</p>
-
-<div class="old-price">
-Valor original: $9.99
+  <div class="iframe-container">
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfJJUG1rpl8qGcPPVEikXhjpUeW8CH9Mip5_H9epZp4j2jO6g/viewform?usp=publish-editor" 
+      width="100%" 
+      height="900" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">
+      Carregando…
+    </iframe>
+  </div>
 </div>
 
-<div class="price">
-$6.99
+<!-- NOTIFICAÇÃO SLIDE -->
+<div id="notification" class="slide-notification">
+  <span id="notification-text"></span>
 </div>
 
-<p>
-&#10004; Acesso completo ao treinamento <br>
-&#10004; Templates de anúncios <br>
-&#10004; Lista de fornecedores confiáveis <br>
-&#10004; Checklists validados <br>
-&#10004; Atualizações futuras gratuitas
-</p>
+<style>
+.slide-notification {
+  position: fixed;
+  bottom: 20px;
+  right: -350px; /* começa fora da tela */
+  background-color: #0b0b0b;
+  border: 2px solid #e10600;
+  color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  font-size: 16px;
+  z-index: 9999;
+  transition: right 0.5s ease-in-out, opacity 0.5s;
+  opacity: 0;
+}
 
-<div class="timer" id="countdown">
-Oferta expira em 05:00
-</div>
+.slide-notification.show {
+  right: 20px; /* desliza para dentro */
+  opacity: 1;
+}
 
-<a 
-href="https://pay.hotmart.com/N102929996D?off=svkkyh8t&lang=PT_BR&sck=HOTMART_PLATFORM&bid=1769792220558&cupom=OFERTA30"
-class="btn"
-id="buyBtn"
->
-Garantir Minha Vaga Com Desconto
-</a>
-
-<div class="seals">
-&#128274; Compra segura &bull; Garantia de 7 dias &bull; Acesso imediato
-</div>
-
-</div>
+.slide-notification.hide {
+  right: -350px; /* desliza para fora */
+  opacity: 0;
+}
+</style>
 
 <script>
+// Lista de nomes fictícios + cidades
+const names = [
+  "Owen, Maputo", "Lúcia, Beira", "Miguel, Nampula", "Sara, Chimoio", "Pedro, Matola",
+  "Ana, Pemba", "Carlos, Inhambane", "Mariana, Quelimane", "Rui, Tete", "Joana, Xai-Xai",
+  "Paulo, Nacala", "Catarina, Lichinga", "Bruno, Pemba", "Isabel, Maputo", "Daniel, Beira",
+  "Fátima, Nampula", "Ricardo, Chimoio", "Sofia, Matola", "Nelson, Pemba", "Rita, Inhambane",
+  "Tiago, Quelimane", "Patrícia, Tete", "Vítor, Xai-Xai", "Cláudia, Nacala", "Jorge, Lichinga",
+  "Helena, Maputo", "Fernando, Beira", "Carla, Nampula", "Rafael, Chimoio", "Marta, Matola",
+  "André, Pemba", "Mónica, Inhambane", "João, Quelimane", "Laura, Tete", "Eduardo, Xai-Xai",
+  "Paula, Nacala", "Gonçalo, Lichinga", "Vanessa, Maputo", "Marcelo, Beira", "Tatiana, Nampula",
+  "Alex, Chimoio", "Bianca, Matola", "Filipe, Pemba", "Daniela, Inhambane", "Samuel, Quelimane",
+  "Carolina, Tete", "Leonardo, Xai-Xai", "Helder, Nacala", "Nádia, Lichinga", "Guilherme, Maputo",
+  "Rosa, Beira", "Matias, Nampula", "Inês, Chimoio", "Dário, Matola", "Renata, Pemba"
+];
 
-let time = 300;
-const countdown = document.getElementById("countdown");
-const buyBtn = document.getElementById("buyBtn");
+let currentIndex = 0;
 
-function updateTimer(){
+function showNotification() {
+  const notification = document.getElementById('notification');
+  const text = document.getElementById('notification-text');
 
-let minutes = Math.floor(time / 60);
-let seconds = time % 60;
+  // Pega próximo nome
+  const person = names[currentIndex];
+  text.textContent = `${person} acabou de entrar na lista de espera!`;
 
-if(seconds < 10){
-seconds = "0" + seconds;
+  // Mostra (slide para dentro)
+  notification.classList.add('show');
+  notification.classList.remove('hide');
+
+  // Esconde após 8s (slide para fora)
+  setTimeout(() => {
+    notification.classList.remove('show');
+    notification.classList.add('hide');
+  }, 8000);
+
+  // Próximo índice
+  currentIndex++;
+  if (currentIndex >= names.length) currentIndex = 0;
+
+  // Próxima notificação em 10s
+  setTimeout(showNotification, 15000);
 }
 
-countdown.innerHTML = "Oferta expira em " + minutes + ":" + seconds;
-
-if(time <= 0){
-
-buyBtn.innerText = "Oferta Encerrada";
-buyBtn.style.background = "#555";
-buyBtn.style.pointerEvents = "none";
-countdown.innerHTML = "Oferta encerrada";
-
-return;
-
-}
-
-time--;
-
-}
-
-updateTimer();
-setInterval(updateTimer,1000);
-
+// Começa automaticamente
+window.onload = () => {
+  setTimeout(showNotification, 2000); // 2s depois de carregar
+};
 </script>
 
 </body>
