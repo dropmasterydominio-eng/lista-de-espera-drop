@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino Rápido 20 - Apenas 20 Minutos por Dia em Casa</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        .hero-bg {
+            background:
+                linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
+                url('https://via.placeholder.com/1920x1080/111827/f97316?text=Treino+R%C3%A1pido+20');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .accent {
+            color: #f97316;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            transition: all 0.25s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.5);
+        }
+
+        .highlight {
+            background: #84cc16;
+            color: #111827;
+        }
+
+        /* ACCORDION (corrigido e sem duplicação) */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-header.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body class="bg-zinc-950 text-zinc-100">
+
+<section class="hero-bg min-h-screen flex items-center py-16">
+
+    <div class="w-full max-w-5xl mx-auto px-5 text-center">
+
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur px-4 py-2 rounded-full mb-6 text-xs sm:text-sm font-medium">
+            <i class="fas fa-bolt text-orange-400"></i>
+            ACESSO IMEDIATO • APENAS R$ 17
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-3xl sm:text-4xl md:text-6xl font-black leading-snug mb-6">
+            20 MINUTOS POR DIA<br>
+            <span class="accent">TRANSFORMAÇÃO</span> EM CASA
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-base sm:text-lg md:text-2xl text-zinc-300 max-w-2xl mx-auto mb-10">
+            Sem academia. Sem equipamentos. Sem desculpas.<br class="hidden sm:block">
+            Um método simples que qualquer iniciante consegue seguir.
+        </p>
+
+        <!-- CTA -->
+        <a href="#preco"
+           class="btn-primary text-white font-bold text-lg sm:text-xl md:text-2xl px-8 py-4 sm:px-10 sm:py-5 rounded-2xl inline-flex items-center gap-3 shadow-xl">
+            QUERO COMEÇAR AGORA
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <!-- Benefícios -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 mt-10 text-xs sm:text-sm text-zinc-400">
+            <div><i class="fas fa-check text-green-400"></i> Plano de 30 dias</div>
+            <div><i class="fas fa-check text-green-400"></i> Sem equipamentos</div>
+            <div><i class="fas fa-check text-green-400"></i> Para iniciantes</div>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="py-16 md:py-20 bg-zinc-900">
+
+    <div class="max-w-5xl mx-auto px-5 text-center">
+
+        <!-- Headline -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 leading-snug">
+            Você também sente que começa… mas nunca consegue continuar?
+        </h2>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+            <!-- Item -->
+            <div class="bg-zinc-800 p-6 rounded-2xl">
+                <i class="fas fa-clock text-4xl text-orange-500 mb-4"></i>
+                <p class="font-semibold text-sm sm:text-base">
+                    “Não tenho tempo pra academia”
+                </p>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-zinc-800 p-6 rounded-2xl">
+                <i class="fas fa-dumbbell text-4xl text-orange-500 mb-4"></i>
+                <p class="font-semibold text-sm sm:text-base">
+                    “Não tenho equipamentos”
+                </p>
+            </div>
+
+            <!-- Item -->
+            <div class="bg-zinc-800 p-6 rounded-2xl">
+                <i class="fas fa-heart-crack text-4xl text-orange-500 mb-4"></i>
+                <p class="font-semibold text-sm sm:text-base">
+                    “Desisto depois de poucos dias”
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Fechamento emocional -->
+        <p class="mt-12 text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto">
+            O problema não é você — é a forma complicada como te ensinaram a treinar.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="py-20 md:py-24 bg-zinc-950">
+
+    <div class="max-w-6xl mx-auto px-5">
+
+        <!-- Headline -->
+        <div class="text-center mb-14">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-black mb-6 leading-snug">
+                Resultados reais com apenas <span class="text-orange-500">20 minutos por dia</span>
+            </h2>
+
+            <p class="text-base sm:text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto">
+                Sem complicação. Sem precisar pensar. Apenas seguir e evoluir.
+            </p>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">⏱️</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Treinos rápidos e eficientes
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Apenas 20 minutos por dia que cabem em qualquer rotina, até nas mais corridas.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">🏠</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Treine em casa
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Sem academia, sem equipamentos e sem depender de ninguém.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">📈</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Evolução visível
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Mais energia, mais disposição e mudanças no corpo em poucas semanas.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">🧠</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Explicação simples
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Você aprende exatamente como fazer cada exercício sem confusão.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">📅</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Plano pronto de 30 dias
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Você só segue o plano — sem precisar pensar no que fazer.
+                </p>
+            </div>
+
+            <!-- CARD -->
+            <div class="bg-zinc-900 p-6 rounded-2xl border border-zinc-800 hover:border-orange-500/40 transition">
+                <div class="text-3xl mb-4">🛡️</div>
+                <h3 class="text-lg sm:text-xl font-bold mb-2">
+                    Seguro para iniciantes
+                </h3>
+                <p class="text-zinc-400 text-sm sm:text-base">
+                    Adaptado para quem está começando ou está acima do peso.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Fechamento -->
+        <div class="text-center mt-14">
+            <p class="text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl mx-auto">
+                Esse não é só um treino — é um método simples que te tira do zero e te leva até resultados reais.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="preco" class="py-16 md:py-20 bg-black border-t border-orange-500/20">
+
+    <div class="max-w-4xl mx-auto px-5 text-center">
+
+        <!-- Headline -->
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 leading-snug">
+            Comece hoje por menos que um lanche
+        </h2>
+
+        <p class="text-zinc-400 mb-10 text-sm sm:text-base">
+            Acesso imediato • Sem mensalidade • Pague uma vez só
+        </p>
+
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-2xl p-8 max-w-md mx-auto border border-orange-500/20 shadow-xl">
+
+            <!-- Preço antigo -->
+            <p class="text-zinc-500 line-through text-base mb-2">
+                De R$ 97
+            </p>
+
+            <!-- Preço atual -->
+            <h3 class="text-4xl sm:text-5xl font-black text-orange-500 mb-2">
+                R$ 17
+            </h3>
+
+            <p class="text-zinc-400 mb-6 text-sm">
+                ou 2x de R$ 9,50
+            </p>
+
+            <!-- Benefícios -->
+            <ul class="text-left space-y-3 mb-8 text-zinc-300 text-sm">
+                <li>✔ Plano completo de 30 dias</li>
+                <li>✔ Treinos rápidos de 20 minutos</li>
+                <li>✔ Sem equipamentos</li>
+                <li>✔ Acesso imediato</li>
+            </ul>
+
+            <!-- CTA -->
+            <a href="https://SEU-LINK-DE-PAGAMENTO"
+               class="btn-primary block w-full py-4 text-lg font-bold rounded-xl text-center">
+                QUERO COMEÇAR AGORA
+            </a>
+
+            <!-- Garantia -->
+            <p class="mt-4 text-green-400 text-xs">
+                ✔ 7 dias de garantia total — risco zero
+            </p>
+
+        </div>
+
+        <!-- Urgência -->
+        <p class="mt-8 text-orange-400 text-xs sm:text-sm">
+            ⚠️ Oferta de lançamento pode sair do ar a qualquer momento
+        </p>
+
+    </div>
+
+</section>
+
+<section class="py-16 md:py-20 bg-zinc-900">
+
+    <div class="max-w-3xl mx-auto px-5 text-center">
+
+        <div class="bg-zinc-800 border border-green-400/30 rounded-2xl p-8 md:p-10">
+
+            <!-- Ícone -->
+            <div class="text-green-400 text-5xl mb-6">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+
+            <!-- Título -->
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
+                Teste por 7 dias sem risco
+            </h3>
+
+            <!-- Texto -->
+            <p class="text-sm sm:text-base md:text-lg text-zinc-300 mb-4">
+                Você pode acessar todo o conteúdo, começar os treinos e ver os resultados na prática.
+            </p>
+
+            <p class="text-sm sm:text-base md:text-lg text-zinc-300 mb-6">
+                Se por qualquer motivo você não gostar, basta pedir reembolso e devolvemos 100% do seu dinheiro.
+            </p>
+
+            <!-- Destaque -->
+            <div class="bg-green-400 text-black font-semibold px-5 py-3 rounded-xl inline-block text-sm sm:text-base">
+                Simples. Sem perguntas. Sem burocracia.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ - ACCORDION -->
+<section class="py-20 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+        
+        <div class="space-y-4">
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+                <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-zinc-700 transition">
+                    <span class="font-semibold text-xl">Preciso de algum equipamento para treinar?</span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400 transition-transform"></i>
+                </button>
+                <div class="accordion-content px-8 text-zinc-400">
+                    <div class="py-6">
+                        Não! Todos os exercícios são feitos apenas com o peso do seu corpo. Basta um pequeno espaço em casa.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+                <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-zinc-700 transition">
+                    <span class="font-semibold text-xl">O programa é realmente para iniciantes?</span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400 transition-transform"></i>
+                </button>
+                <div class="accordion-content px-8 text-zinc-400">
+                    <div class="py-6">
+                        Sim! Foi criado especialmente para quem nunca treinou ou está voltando após muito tempo. Inclui adaptações para sobrepeso e níveis diferentes.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+                <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-zinc-700 transition">
+                    <span class="font-semibold text-xl">Quanto tempo preciso dedicar por dia?</span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400 transition-transform"></i>
+                </button>
+                <div class="accordion-content px-8 text-zinc-400">
+                    <div class="py-6">
+                        Apenas 20 minutos por dia. O método foi feito para encaixar até na rotina mais corrida.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+                <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-zinc-700 transition">
+                    <span class="font-semibold text-xl">Funciona para pessoas com sobrepeso?</span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400 transition-transform"></i>
+                </button>
+                <div class="accordion-content px-8 text-zinc-400">
+                    <div class="py-6">
+                        Sim. Existe uma adaptação específica para reduzir impacto nas articulações e permitir evolução segura desde o início.
+                    </div>
+                </div>
+            </div>
+
+            <!-- ITEM -->
+            <div class="bg-zinc-800 rounded-3xl overflow-hidden border border-zinc-700">
+                <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-zinc-700 transition">
+                    <span class="font-semibold text-xl">Posso treinar todos os dias?</span>
+                    <i class="fas fa-chevron-down accordion-icon text-orange-400 transition-transform"></i>
+                </button>
+                <div class="accordion-content px-8 text-zinc-400">
+                    <div class="py-6">
+                        O ideal é treinar 4 a 5 vezes por semana, respeitando dias de descanso para recuperação muscular e melhores resultados.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CTA FINAL OTIMIZADO -->
+<section class="py-24 bg-gradient-to-b from-zinc-900 to-black text-center relative overflow-hidden">
+
+    <!-- Glow de fundo -->
+    <div class="absolute inset-0 bg-orange-500/10 blur-3xl opacity-30"></div>
+
+    <div class="max-w-3xl mx-auto px-6 relative z-10">
+
+        <!-- Headline -->
+        <h2 class="text-5xl md:text-6xl font-black leading-tight mb-6">
+            Você só precisa de <span class="text-orange-500">20 minutos por dia</span><br>
+            pra começar a mudar seu corpo
+        </h2>
+
+        <!-- Subheadline -->
+        <p class="text-xl md:text-2xl text-zinc-400 mb-10">
+            Sem academia. Sem equipamentos.<br>
+            Só você, seu corpo e um plano que realmente funciona.
+        </p>
+
+        <!-- CTA -->
+        <a href="https://SEU-LINK-DE-PAGAMENTO"
+           class="btn-primary inline-flex items-center justify-center gap-3 text-white font-bold text-3xl py-8 px-16 rounded-3xl shadow-2xl">
+            QUERO COMEÇAR AGORA POR R$ 17
+            <i class="fas fa-arrow-right"></i>
+        </a>
+
+        <!-- Urgência -->
+        <p class="mt-6 text-sm text-orange-400 font-medium">
+            ⚠️ Oferta de lançamento pode sair do ar a qualquer momento
+        </p>
+
+        <!-- Garantia -->
+        <div class="mt-10 flex flex-col items-center gap-3 text-zinc-400 text-sm">
+            <div class="flex items-center gap-2 text-green-400">
+                <i class="fas fa-shield-alt"></i>
+                Garantia de 7 dias ou seu dinheiro de volta
+            </div>
+            <div>
+                Acesso imediato após pagamento • Comece hoje mesmo
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="bg-black py-12 text-center text-zinc-500 text-sm">
+        <p>© 2026 Eugenio Machaei • Todos os direitos reservados</p>
+    </footer>
+
+<script>
+document.querySelectorAll('.accordion-header').forEach(button => {
+    button.addEventListener('click', () => {
+        const content = button.nextElementSibling;
+
+        // Fecha todos
+        document.querySelectorAll('.accordion-content').forEach(c => {
+            c.style.maxHeight = null;
+        });
+
+        document.querySelectorAll('.accordion-header').forEach(b => {
+            b.classList.remove('active');
+        });
+
+        // Abre o clicado
+        if (!content.style.maxHeight) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            button.classList.add('active');
+        }
+    });
+});
+</script>
+
+<!-- Botão WhatsApp Flutuante para Suporte -->
+<a href="https://wa.me/+258849005078?text=Oi%20Angela%2C%20tenho%20um%20problema%20no%20checkout%20do%20ebook%20Anti-Pessoas%20T%C3%B3xicas%20ou%20preciso%20de%20ajuda%20com%20algo"
+   target="_blank"
+   title="Problemas no checkout? Fale comigo agora!"
+   style="position: fixed; bottom: 25px; right: 25px; z-index: 9999; width: 70px; height: 70px; background: #25D366; border-radius: 50%; box-shadow: 0 8px 25px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; text-decoration: none; transition: all 0.3s ease;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Suporte WhatsApp" style="width: 50px; height: 50px;">
+</a>
+
+<!-- Tooltip opcional ao passar o mouse -->
+<style>
+    a[href^="https://wa.me"]::after {
+        content: "Fale comigo no WhatsApp";
+        position: absolute;
+        bottom: 90px;
+        right: 0;
+        background: #111;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        pointer-events: none;
+    }
+    a[href^="https://wa.me"]:hover::after {
+        opacity: 1;
+        visibility: visible;
+        bottom: 85px;
+    }
+</style>
+
+</body>
+</html>
